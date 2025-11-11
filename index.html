@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>내손안의 작은 AI ‘내아이’ | 김유신</title>
+  <meta name="description" content="능동적으로 행동하는 음성 기반 AI 비서 프로젝트 ‘내아이’ 소개 페이지" />
+  <style>
+    :root{
+      --bg:#0b0c10; --fg:#e6e6e6; --muted:#a3a3a3; --card:#13151a; --border:#232631; --pri:#6ea8fe; --accent:#9b87f5;
+      --ok:#4ade80; --danger:#f87171;
+      --radius:16px;
+      --maxw:980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Pretendard,Apple SD Gothic Neo,Noto Sans KR,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--fg); line-height:1.65}
+    a{color:var(--pri); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in oklab, var(--bg) 88%, transparent); border-bottom:1px solid var(--border); z-index:50}
+    .nav{display:flex; gap:16px; align-items:center; justify-content:space-between; padding:12px 24px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg, var(--accent), var(--pri)); display:grid; place-items:center; font-weight:700}
+    .logo span{color:#0a0a0a}
+    .brand h1{font-size:18px; margin:0}
+    .nav a{font-size:14px; color:var(--fg)}
+
+    .hero{padding:48px 24px 24px}
+    .hero h2{font-size:38px; margin:0 0 8px}
+    .hero p{margin:0; color:var(--muted)}
+
+    .grid{display:grid; grid-template-columns:1fr; gap:16px}
+    @media (min-width: 880px){ .grid{grid-template-columns:1.1fr .9fr} }
+
+    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
+    .card h3{margin:0 0 8px; font-size:20px}
+    .section{margin:18px 0 0}
+    .section h4{margin:0 0 6px; font-size:16px; color:#cfcfea}
+    .chip{display:inline-flex; align-items:center; border:1px solid var(--border); background:#101217; padding:6px 10px; border-radius:999px; font-size:13px; margin:4px 6px 0 0}
+    .list{margin:10px 0 0; padding:0 0 0 16px}
+    .muted{color:var(--muted)}
+
+    footer{margin:40px 0 24px; text-align:center; color:var(--muted); font-size:14px}
+    .kbd{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:12px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:#0f1116}
+    .split{display:grid; grid-template-columns:1fr; gap:16px}
+    @media (min-width: 720px){ .split{grid-template-columns:1fr 1fr} }
+
+    .badge{font-size:12px; padding:4px 8px; border:1px solid var(--border); background:#0f1116; border-radius:999px; margin-left:8px}
+    .hero-cta{margin-top:14px; display:flex; gap:10px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:#0f1116; color:var(--fg)}
+    .btn.primary{background:linear-gradient(135deg, color-mix(in oklab, var(--accent) 70%, black), color-mix(in oklab, var(--pri) 70%, black)); color:#0a0a0a; border:none}
+    .btn:hover{filter:brightness(1.06)}
+
+    .code{white-space:pre-wrap; font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:13px; background:#0f1116; border:1px solid var(--border); padding:14px; border-radius:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><span>AI</span></div>
+        <h1>내손안의 작은 AI ‘내아이’</h1>
+      </div>
+      <nav>
+        <a href="#about">소개</a>
+        <span class="muted">·</span>
+        <a href="#skills">기술 스택</a>
+        <span class="muted">·</span>
+        <a href="#project">프로젝트</a>
+        <span class="muted">·</span>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <h2>김유신<span class="badge">기획자/개발자</span></h2>
+      <p>삶 속 사소한 문제들을 발견하고 관찰하며 개선하고 싶어하는 기획자/개발자</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#project">프로젝트 보기</a>
+        <a class="btn" href="#skills">기술 스택</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>About Me</h3>
+        <p>
+          저는 일상 속 사소한 일이라도 필요하다고 느끼면 직접 기획하고 개발해보려 하는 기획자, 개발자입니다.
+          OpenAI와 같은 AI를 활용해 모르는 부분을 빠르게 학습하고, 이를 실제 제품/서비스로 실현하는 것을 목표로 합니다.
+        </p>
+        <p>
+          작은 불편을 발견하고 해결해 나가는 과정에서 축적되는 경험과 데이터가 더 나은 사용자 경험으로 이어진다고 믿습니다.
+          이러한 관점으로 ‘내손안의 작은 AI, 내아이’를 설계하고 구현하고 있습니다.
+        </p>
+      </article>
+
+      <aside class="card" id="contact">
+        <h3>Contact & Links</h3>
+        <div class="section">
+          <h4>이메일</h4>
+          <p><a href="mailto:kimyousin0207@naver.com">kimyousin0207@naver.com</a></p>
+        </div>
+        <div class="section">
+          <h4>GitHub</h4>
+          <p><a href="https://github.com/kimyusin027" target="_blank" rel="noopener">github.com/kimyusin027</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card" id="skills" style="margin-top:16px">
+      <h3>전체 기술 스택</h3>
+      <div class="section">
+        <h4>프론트엔드</h4>
+        <div>
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+        </div>
+      </div>
+      <div class="section">
+        <h4>백엔드</h4>
+        <div>
+          <span class="chip">Node.js</span>
+        </div>
+      </div>
+      <div class="section">
+        <h4>DevOps & Tools</h4>
+        <div>
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Vercel</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Unity</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="project" style="margin-top:16px">
+      <h3>프로젝트: 내손안의 작은 AI ‘내아이’</h3>
+
+      <div class="section">
+        <h4>문제 정의</h4>
+        <p>
+          기존 AI 비서는 지나치게 <strong>수동적</strong>이어서 일정 관리나 메모 등 실제 비서 역할을 충분히 수행하지 못한다고 느꼈습니다.
+          이에 사용자의 맥락을 파악하고 <strong>능동적으로 행동</strong>하는 AI 비서를 만들고자 했습니다.
+        </p>
+      </div>
+
+      <div class="section split">
+        <div>
+          <h4>아키텍처/설계</h4>
+          <ul class="list">
+            <li>음성 인식 모듈과 OpenAI 기반 LLM을 결합한 파이프라인</li>
+            <li>발화 → 텍스트 변환 → 의도 파악 → 툴 호출 → 응답(텍스트/음성)</li>
+            <li>능동적 행동을 위한 프롬프트 설계와 기능 모듈화(일정, 메모, 정보 탐색)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>핵심 기능</h4>
+          <ul class="list">
+            <li><strong>기능 1. 음성 인식 기반 상호작용</strong>: Whisper로 다국어 음성→텍스트, 번역 지원</li>
+            <li class="muted">Python 전처리 → 프롬프트 변환 → AI API 매개변수 → 일정/메모/요약 실행</li>
+            <li><strong>기능 2. 의도 인식 및 엔티티 추출</strong>: 의도 파악, 시간·장소·대상 등 엔티티 추출</li>
+            <li class="muted">컨텍스트 분석 → 적합한 툴 호출 → 결과를 텍스트+음성으로 전달</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section split">
+        <div>
+          <h4>나의 역할 및 기여</h4>
+          <ul class="list">
+            <li>음성 인식 → 의도 파악 → 툴 실행 → 응답의 전체 플로우 설계/통합</li>
+            <li>프롬프트 반복 개선으로 오작동 케이스 감소 및 시나리오 별 튜닝</li>
+          </ul>
+        </div>
+        <div>
+          <h4>결과 및 성과</h4>
+          <ul class="list">
+            <li>일정/할 일을 잊지 않도록 도와 마감 준수에 기여</li>
+            <li>정보 탐색 시간을 단축해 전반적인 작업 효율 향상</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section split">
+        <div>
+          <h4>회고 – 배운 점</h4>
+          <ul class="list">
+            <li>LLM이 제대로 작동하도록 하는 프롬프트 작성 방식</li>
+            <li>효율적 구동을 위한 파이프라인 개선 방법</li>
+          </ul>
+        </div>
+        <div>
+          <h4>회고 – 개선점</h4>
+          <ul class="list">
+            <li>기능 증가에 따른 지연 시간 문제</li>
+            <li>경량화 및 모델/파이프라인 최적화로 응답 속도 개선</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h4>예시 프롬프트</h4>
+        <div class="code" aria-label="example prompt">
+사용자: 내일 오전 10시에 회의 일정 등록해 줘 그리고 30분 전에 리마인드해줘
+시스템(내아이): 사용자의 발화를 텍스트로 전환 → 의도 파악(일정 등록, 리마인드 설정) → 캘린더/알림 툴 호출 → 확인 응답(텍스트+음성)
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> 김유신 · 내손안의 작은 AI ‘내아이’
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
